@@ -58,6 +58,37 @@
 
 	</script>
 </div></div><div id="container_459f1faa"><div id="container_459f1faa_padding" ><div class="textstyle2"><div id="elem_67f07d53"  style="vertical-align: top; position:relative; display: inline-block; width:50%; height:350px; min-width:350px; background-color:#E5E5E5; " ><form action="contact.php" enctype="application/x-www-form-urlencoded" method="POST">  <div id="text_7f0e379e">
+    <div class="textstyle1">
+<span class="textstyle8"><br/>Contact Form<br/><br/></span><div id="container_3ef7e28a"><div id="container_3ef7e28a_padding" ><div class="textstyle2"><span class="textstyle8"><br/></span><label id="label_9faa198" for="edit_dda4e7e">Name:</label><input type="text" value="" title="" name="NameField" required="required"  id="edit_dda4e7e" >
+<span class="textstyle8"><br/><br/></span><label id="label_23baf3ea" for="edit_12077a6">Email:</label><input type="text" value="" title="" name="EmailField" required="required"  id="edit_12077a6" >
+<span class="textstyle8"><br/><br/></span><input type="text" value="" title="" name="antiSpamAnswer" required="required"  id="edit_64589801" >
+<label id="label_18bafa13" for="edit_64589801">The Answer to the Ultimate Question</label><span class="textstyle8"><br/><br/></span><textarea name="TextField" title="" required="required" cols="20" rows="4"  id="edit_33ab7473"></textarea>
+<span class="textstyle8"><br/><br/></span><label id="label_23e9de1e" for="edit_33ab7473">Your Message</label></div>
+<div style="clear:both"></div></div></div><input name="Button1" type="submit" value="Send" title=""  id="button_28553e3e" >
+<span class="textstyle8"><br/><br/></span>      </div>
+    </div>
+</form>
+<?PHP
+if (count($_POST)>1)
+{ 
+  if (isset($_POST['antiSpamAnswer']) && strcasecmp($_POST['antiSpamAnswer'],'18')==0)
+  {
+    $text = "";
+    foreach($_POST as $name => $value)
+    {
+       $text .= "$name : $value\n";
+    }
+    if ($text != "")
+    {
+      echo 'Thanks for contacting us';
+      echo '<script type="text/javascript">var e = document.getElementById("elem_67f07d53"); e.firstChild.style.display = "none";</script>';
+      $headers = "Content-Type: text/plain; charset=UTF-8";
+      mail("email@example.com", "Contact form request", $text, $headers);
+    }
+  }
+  else
+  { 
+    echo "<p style='color:red'>Sorry, you need to answer the anti-Spam message correctly.</p>";
     foreach($_POST as $name => $value)
     { 
        echo '<script type="text/javascript">var e = document.getElementsByName("' . $name . '")[0]; e.value = ' . json_encode($value) . ';</script>';    }

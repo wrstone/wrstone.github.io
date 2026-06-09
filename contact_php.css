@@ -36,8 +36,8 @@ body { background-color:#DADADA; padding:0;  margin: 0; }
 .menustyle3 { position:absolute; width:85px; height:55px; left:180px;  }
 .textstyle6 { font-size:14pt; font-family:'Trebuchet MS', Helvetica, sans-serif; color:#FFFFFF; font-weight:bold;  white-space: nowrap; }
 .textstyle7 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF;  white-space: nowrap; }
-#container_459f1faa { vertical-align: top; position:relative; display: inline-block; margin:0px 5px 0px 0px;width:100%; min-height:465px; background-color:#FFFFFF;  }
-#container_459f1faa_padding { margin: 20px 10px 10px 10px;display: block;  }
+#container_459f1faa { vertical-align: top; position:relative; display: inline-block; margin:0px 5px 0px 0px; width:100%; min-height:465px; background-color:#FFFFFF;  }
+#container_459f1faa_padding { margin: 20px 10px 10px 10px; display: block;  }
 .textstyle8 { font-size:10pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
 @media only screen and (max-width: 640px)
 {

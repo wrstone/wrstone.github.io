@@ -6,7 +6,6 @@
 	<meta name="generator" content="RocketCake">
                 <link rel="icon" href="favicon.ico" type="image/x-icon">
 	<title>Contact the Jackelope of Truth</title>
-	<link rel="stylesheet" type="text/css" href="contact_php.css?h=9251e8ed">
 </head>
 <body>
 <div class="textstyle1">
@@ -47,17 +46,12 @@
 
 		js_menu_affa515.createMenuForItem('menuentry_4399966c', ["  <span class=\"textstyle6\">Home</span> ", 'index.html', '',
 		                                   "  <span class=\"textstyle6\">About</span> ", 'about.html', '',
-		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;Who I Am and How I Came To Be</span> ", '', '',
-		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;How Gen-X Changed the World</span> ", '', '',
 		                                   "  <span class=\"textstyle6\">Contact</span> ", 'javascript:void(0);', '']
 		                                   , true);
 		js_menu_affa515.createMenuForItem('menuentry_32be629e', []);
-		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle7\">Who I Am and How I Came To Be</span> ", '', '',
-		                                   "  <span class=\"textstyle7\">How Gen-X Changed the World</span> ", '', '']);
 		js_menu_affa515.createMenuForItem('menuentry_754b9d33', []);
 
 	</script>
-</div></div><div id="container_459f1faa"><div id="container_459f1faa_padding" ></div></div><span class="textstyle8"><br/></span></div>
 <div style="clear:both"></div></div></div>  </div>
 </body>
 </html>

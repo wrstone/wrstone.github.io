@@ -6,6 +6,7 @@
 	<meta name="generator" content="RocketCake">
                 <link rel="icon" href="favicon.ico" type="image/x-icon">
 	<title>Contact the Jackelope of Truth</title>
+	<link rel="stylesheet" type="text/css" href="contact_php.css?h=6c1a0fe3">
 </head>
 <body>
 <div class="textstyle1">

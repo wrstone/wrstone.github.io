@@ -48,12 +48,24 @@
 		js_menu_affa515.createMenuForItem('menuentry_4399966c', ["  <span class=\"textstyle6\">Home</span> ", 'index.html', '',
 		                                   "  <span class=\"textstyle6\">About</span> ", 'about.html', '',
 		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;Who I Am and How I Came To Be</span> ", 'whoami.html', '',
+		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;How Gen-X Changed the World</span> ", 'gen-x.html', '',
 		                                   "  <span class=\"textstyle6\">Contact</span> ", 'javascript:void(0);', '']
 		                                   , true);
 		js_menu_affa515.createMenuForItem('menuentry_32be629e', []);
+		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle7\">Who I Am and How I Came To Be</span> ", 'whoami.html', '',
+		                                   "  <span class=\"textstyle7\">How Gen-X Changed the World</span> ", 'gen-x.html', '']);
 		js_menu_affa515.createMenuForItem('menuentry_754b9d33', []);
 
 	</script>
+</div></div><div id="container_459f1faa"><div id="container_459f1faa_padding" ><div class="textstyle2"><div id="elem_67f07d53"  style="vertical-align: top; position:relative; display: inline-block; width:50%; height:350px; min-width:350px; background-color:#E5E5E5; " ><form action="contact.php" enctype="application/x-www-form-urlencoded" method="POST">  <div id="text_7f0e379e">
+    foreach($_POST as $name => $value)
+    { 
+       echo '<script type="text/javascript">var e = document.getElementsByName("' . $name . '")[0]; e.value = ' . json_encode($value) . ';</script>';    }
+  }
+}
+?>
+</div></div>
+<div style="clear:both"></div></div></div><span class="textstyle9"><br/></span></div>
 <div style="clear:both"></div></div></div>  </div>
 </body>
 </html>

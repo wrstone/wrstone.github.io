@@ -47,6 +47,7 @@
 
 		js_menu_affa515.createMenuForItem('menuentry_4399966c', ["  <span class=\"textstyle6\">Home</span> ", 'index.html', '',
 		                                   "  <span class=\"textstyle6\">About</span> ", 'about.html', '',
+		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;Who I Am and How I Came To Be</span> ", 'whoami.html', '',
 		                                   "  <span class=\"textstyle6\">Contact</span> ", 'javascript:void(0);', '']
 		                                   , true);
 		js_menu_affa515.createMenuForItem('menuentry_32be629e', []);

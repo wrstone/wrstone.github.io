@@ -34,20 +34,18 @@ body { background-color:#DADADA; padding:0;  margin: 0; }
 .menuentry_text2 { position:absolute; top:0px; bottom:0px; left:0px; right:0px; margin-top:auto; margin-bottom:auto; margin-left:auto; margin-right:auto; height:18px;  }
 .textstyle5 { font-size:12pt; font-family:Georgia, serif; color:#FFFFFF;  white-space: nowrap; }
 .menustyle2 { position:absolute; width:85px; height:55px; left:95px;  }
-.menuentry_text3 { position:absolute; top:0px; bottom:0px; left:0px; right:0px; margin-top:auto; margin-bottom:auto; margin-left:auto; margin-right:auto; height:21px;  }
-.textstyle6 { font-size:12pt; font-family:Segoe, 'Segoe UI', 'Helvetica Neue', sans-serif; color:#FFFFFF;  white-space: nowrap; }
 .menustyle3 { position:absolute; width:85px; height:55px; left:180px;  }
 .menustyle4 { position:absolute; width:113px; height:55px; left:265px;  }
-.textstyle7 { font-size:14pt; font-family:'Trebuchet MS', Helvetica, sans-serif; color:#FFFFFF; font-weight:bold;  white-space: nowrap; }
-.textstyle8 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF;  white-space: nowrap; }
+.textstyle6 { font-size:14pt; font-family:'Trebuchet MS', Helvetica, sans-serif; color:#FFFFFF; font-weight:bold;  white-space: nowrap; }
+.textstyle7 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF;  white-space: nowrap; }
 #container_ec46549 { vertical-align: top; position:relative; display: inline-block; margin:0px 5px 0px 0px; width:100%; min-height:391px; background-color:#FFFFFF;  }
 #container_ec46549_padding { margin: 20px 10px 10px 10px; display: block;  }
 #heading_49c56d3a { vertical-align: bottom; position:relative; display: inline-block; width:321px; background:none;  }
-.textstyle9 { text-align:left;display: block }
+.textstyle8 { text-align:left;display: block }
 .ulstyle1 { margin:0; font-size: 14pt; color:#7F8D0F;  }
-.textstyle10 { font-size:14pt; font-family:Georgia, serif; color:#000000;  }
-.textstyle11 { font-size:14pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
-.textstyle12 { font-size:10pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+.textstyle9 { font-size:14pt; font-family:Georgia, serif; color:#000000;  }
+.textstyle10 { font-size:14pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+.textstyle11 { font-size:10pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
 @media only screen and (max-width: 640px)
 {
 		#container_716c74c8 { width:100%;  }

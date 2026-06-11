@@ -6,7 +6,7 @@
 	<meta name="generator" content="RocketCake">
                 <link rel="icon" href="favicon.ico" type="image/x-icon">
 	<title>Contact the Jackelope of Truth</title>
-	<link rel="stylesheet" type="text/css" href="contact_php.css?h=d90dc37b">
+	<link rel="stylesheet" type="text/css" href="contact_php.css?h=da8a3e42">
 </head>
 <body>
 <div class="textstyle1">
@@ -61,21 +61,21 @@
 		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;The Ballad of James Dixon</span> ", '', '']
 		                                   , true);
 		js_menu_affa515.createMenuForItem('menuentry_32be629e', []);
-		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle7\">Who I Am and How I Came To Be</span> ", 'about/whoami.html', '',
-		                                   "  <span class=\"textstyle7\">How Gen-X Changed the World</span> ", 'about/gen-x.html', '']);
+		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle5\">Who I Am and How I Came To Be</span> ", 'about/whoami.html', '',
+		                                   "  <span class=\"textstyle5\">How Gen-X Changed the World</span> ", 'about/gen-x.html', '']);
 		js_menu_affa515.createMenuForItem('menuentry_754b9d33', []);
 		js_menu_affa515.createMenuForItem('menuentry_ca04df8', ["  <span class=\"textstyle5\">The Ballad of James Dixon</span> ", '', '']);
 
 	</script>
 </div></div><div id="container_459f1faa"><div id="container_459f1faa_padding" ><div class="textstyle2"><div id="elem_67f07d53"  style="vertical-align: top; position:relative; display: inline-block; width:50%; height:350px; min-width:350px; background-color:#E5E5E5; " ><form action="contact.php" enctype="application/x-www-form-urlencoded" method="POST">  <div id="text_7f0e379e">
     <div class="textstyle1">
-<span class="textstyle8"><br/>Contact Form<br/><br/></span><div id="container_3ef7e28a"><div id="container_3ef7e28a_padding" ><div class="textstyle2"><span class="textstyle8"><br/></span><label id="label_9faa198" for="edit_dda4e7e">Name:</label><input type="text" value="" title="" name="NameField" required="required"  id="edit_dda4e7e" >
-<span class="textstyle8"><br/><br/></span><label id="label_23baf3ea" for="edit_12077a6">Email:</label><input type="text" value="" title="" name="EmailField" required="required"  id="edit_12077a6" >
-<span class="textstyle8"><br/><br/></span><input type="text" value="" title="" name="antiSpamAnswer" required="required"  id="edit_64589801" >
-<label id="label_18bafa13" for="edit_64589801">The Answer to the Ultimate Question</label><span class="textstyle8"><br/><br/></span><textarea name="TextField" title="" required="required" cols="20" rows="4"  id="edit_33ab7473"></textarea>
-<span class="textstyle8"><br/><br/></span><label id="label_23e9de1e" for="edit_33ab7473">Your Message</label></div>
+<span class="textstyle7"><br/>Contact Form<br/><br/></span><div id="container_3ef7e28a"><div id="container_3ef7e28a_padding" ><div class="textstyle2"><span class="textstyle7"><br/></span><label id="label_9faa198" for="edit_dda4e7e">Name:</label><input type="text" value="" title="" name="NameField" required="required"  id="edit_dda4e7e" >
+<span class="textstyle7"><br/><br/></span><label id="label_23baf3ea" for="edit_12077a6">Email:</label><input type="text" value="" title="" name="EmailField" required="required"  id="edit_12077a6" >
+<span class="textstyle7"><br/><br/></span><input type="text" value="" title="" name="antiSpamAnswer" required="required"  id="edit_64589801" >
+<label id="label_18bafa13" for="edit_64589801">The Answer to the Ultimate Question</label><span class="textstyle7"><br/><br/></span><textarea name="TextField" title="" required="required" cols="20" rows="4"  id="edit_33ab7473"></textarea>
+<span class="textstyle7"><br/><br/></span><label id="label_23e9de1e" for="edit_33ab7473">Your Message</label></div>
 <div style="clear:both"></div></div></div><input name="Button1" type="submit" value="Send" title=""  id="button_28553e3e" >
-<span class="textstyle8"><br/><br/></span>      </div>
+<span class="textstyle7"><br/><br/></span>      </div>
     </div>
 </form>
 <?PHP
@@ -106,7 +106,7 @@ if (count($_POST)>1)
 }
 ?>
 </div></div>
-<div style="clear:both"></div></div></div><span class="textstyle9"><br/></span></div>
+<div style="clear:both"></div></div></div><span class="textstyle8"><br/></span></div>
 <div style="clear:both"></div></div></div>  </div>
 </body>
 </html>

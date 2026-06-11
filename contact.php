@@ -26,7 +26,7 @@
 		</div>
 	</div>
 </a>
-<a href="about.html" style="text-decoration:none" tabindex="-1">
+<a href="about/index.html" style="text-decoration:none" tabindex="-1">
 	<div id="menuentry_9bce134"  class="menustyle2 menu_affa515_mainMenuEntry normalEntry">
 		<div class="menuentry_text2">
   <span class="textstyle5">About</span>
@@ -40,7 +40,7 @@
 		</div>
 	</div>
 </a>
-<a href="lore/index.html" style="text-decoration:none" tabindex="-1">
+<a href="" style="text-decoration:none" tabindex="-1">
 	<div id="menuentry_ca04df8"  class="menustyle4 menu_affa515_mainMenuEntry normalEntry">
 		<div class="menuentry_text2">
   <span class="textstyle5">Fannish Lore</span>
@@ -53,18 +53,18 @@
 		var js_menu_affa515= new wsp_menu('menu_affa515', 'menu_affa515', 10, null, true, {generateAriaLabels: true, setUsefulTabIndices: true, closeWhenMouseOut: false} );
 
 		js_menu_affa515.createMenuForItem('menuentry_4399966c', ["  <span class=\"textstyle6\">Home</span> ", 'index.html', '',
-		                                   "  <span class=\"textstyle6\">About</span> ", 'about.html', '',
-		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;Who I Am and How I Came To Be</span> ", 'whoami.html', '',
-		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;How Gen-X Changed the World</span> ", 'gen-x.html', '',
+		                                   "  <span class=\"textstyle6\">About</span> ", 'about/index.html', '',
+		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;Who I Am and How I Came To Be</span> ", 'about/whoami.html', '',
+		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;How Gen-X Changed the World</span> ", 'about/gen-x.html', '',
 		                                   "  <span class=\"textstyle6\">Contact</span> ", 'javascript:void(0);', '',
-		                                   "  <span class=\"textstyle6\">Fannish Lore</span> ", 'lore/index.html', '',
-		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;The Ballad of James Dixon</span> ", 'lore/dixon/index.html', '']
+		                                   "  <span class=\"textstyle6\">Fannish Lore</span> ", '', '',
+		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;The Ballad of James Dixon</span> ", '', '']
 		                                   , true);
 		js_menu_affa515.createMenuForItem('menuentry_32be629e', []);
-		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle7\">Who I Am and How I Came To Be</span> ", 'whoami.html', '',
-		                                   "  <span class=\"textstyle7\">How Gen-X Changed the World</span> ", 'gen-x.html', '']);
+		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle7\">Who I Am and How I Came To Be</span> ", 'about/whoami.html', '',
+		                                   "  <span class=\"textstyle7\">How Gen-X Changed the World</span> ", 'about/gen-x.html', '']);
 		js_menu_affa515.createMenuForItem('menuentry_754b9d33', []);
-		js_menu_affa515.createMenuForItem('menuentry_ca04df8', ["  <span class=\"textstyle5\">The Ballad of James Dixon</span> ", 'lore/dixon/index.html', '']);
+		js_menu_affa515.createMenuForItem('menuentry_ca04df8', ["  <span class=\"textstyle5\">The Ballad of James Dixon</span> ", '', '']);
 
 	</script>
 </div></div><div id="container_459f1faa"><div id="container_459f1faa_padding" ><div class="textstyle2"><div id="elem_67f07d53"  style="vertical-align: top; position:relative; display: inline-block; width:50%; height:350px; min-width:350px; background-color:#E5E5E5; " ><form action="contact.php" enctype="application/x-www-form-urlencoded" method="POST">  <div id="text_7f0e379e">

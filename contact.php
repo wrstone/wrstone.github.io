@@ -6,6 +6,7 @@
 	<meta name="generator" content="RocketCake">
                 <link rel="icon" href="favicon.ico" type="image/x-icon">
 	<title>Contact the Jackelope of Truth</title>
+	<link rel="stylesheet" type="text/css" href="contact_php.css?h=d90dc37b">
 </head>
 <body>
 <div class="textstyle1">
@@ -39,6 +40,13 @@
 		</div>
 	</div>
 </a>
+<a href="lore/index.html" style="text-decoration:none" tabindex="-1">
+	<div id="menuentry_ca04df8"  class="menustyle4 menu_affa515_mainMenuEntry normalEntry">
+		<div class="menuentry_text2">
+  <span class="textstyle5">Fannish Lore</span>
+		</div>
+	</div>
+</a>
 
 	<script type="text/javascript" src="rc_images/wsp_menu.js"></script>
 	<script type="text/javascript">
@@ -53,6 +61,7 @@
 		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle7\">Who I Am and How I Came To Be</span> ", 'whoami.html', '',
 		                                   "  <span class=\"textstyle7\">How Gen-X Changed the World</span> ", 'gen-x.html', '']);
 		js_menu_affa515.createMenuForItem('menuentry_754b9d33', []);
+		js_menu_affa515.createMenuForItem('menuentry_ca04df8', ["  <span class=\"textstyle5\">The Ballad of James Dixon</span> ", 'lore/dixon/index.html', '']);
 
 	</script>
 </div></div><div id="container_459f1faa"><div id="container_459f1faa_padding" ><div class="textstyle2"><div id="elem_67f07d53"  style="vertical-align: top; position:relative; display: inline-block; width:50%; height:350px; min-width:350px; background-color:#E5E5E5; " ><form action="contact.php" enctype="application/x-www-form-urlencoded" method="POST">  <div id="text_7f0e379e">

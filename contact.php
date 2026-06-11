@@ -6,7 +6,6 @@
 	<meta name="generator" content="RocketCake">
                 <link rel="icon" href="favicon.ico" type="image/x-icon">
 	<title>Contact the Jackelope of Truth</title>
-	<link rel="stylesheet" type="text/css" href="contact_php.css?h=6c1a0fe3">
 </head>
 <body>
 <div class="textstyle1">
@@ -49,7 +48,6 @@
 		                                   "  <span class=\"textstyle6\">About</span> ", 'about.html', '',
 		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;Who I Am and How I Came To Be</span> ", 'whoami.html', '',
 		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;How Gen-X Changed the World</span> ", 'gen-x.html', '',
-		                                   "  <span class=\"textstyle6\">Contact</span> ", 'javascript:void(0);', '']
 		                                   , true);
 		js_menu_affa515.createMenuForItem('menuentry_32be629e', []);
 		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle7\">Who I Am and How I Came To Be</span> ", 'whoami.html', '',

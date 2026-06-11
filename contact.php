@@ -56,6 +56,9 @@
 		                                   "  <span class=\"textstyle6\">About</span> ", 'about.html', '',
 		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;Who I Am and How I Came To Be</span> ", 'whoami.html', '',
 		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;How Gen-X Changed the World</span> ", 'gen-x.html', '',
+		                                   "  <span class=\"textstyle6\">Contact</span> ", 'javascript:void(0);', '',
+		                                   "  <span class=\"textstyle6\">Fannish Lore</span> ", 'lore/index.html', '',
+		                                   "  <span class=\"textstyle6\">&#160;&#160;&#160;The Ballad of James Dixon</span> ", 'lore/dixon/index.html', '']
 		                                   , true);
 		js_menu_affa515.createMenuForItem('menuentry_32be629e', []);
 		js_menu_affa515.createMenuForItem('menuentry_9bce134', ["  <span class=\"textstyle7\">Who I Am and How I Came To Be</span> ", 'whoami.html', '',

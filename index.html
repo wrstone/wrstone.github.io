@@ -1,135 +1,651 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="generator" content="RocketCake">
-                <link rel="icon" href="favicon.ico" type="image/x-icon">
-	<title>William Stone III:  The Jackelope of Truth</title>
-	<link rel="stylesheet" type="text/css" href="index_html.css?h=6df6c7fa">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Jackalope of Truth • Retired Computer Scientist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600&amp;display=swap');
+    
+    :root {
+      --accent: #b45309;
+    }
+    
+    .tail-container {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .serif {
+      font-family: 'Instrument Serif', Georgia, serif;
+    }
+
+    .hero-image {
+      filter: contrast(1.05) saturate(0.95);
+    }
+
+    .section-header {
+      font-size: 1.05rem;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-link:hover {
+      color: #d97706;
+    }
+
+    .dispatch-card {
+      transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                  box-shadow 0.2s cubic-bezier(0.4, 0.0, 0.2, 1),
+                  border-color 0.2s;
+    }
+    
+    .dispatch-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      border-color: #854d0e;
+    }
+
+    .truth-accent {
+      color: #d97706;
+    }
+
+    .modal {
+      animation: modalPop 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @keyframes modalPop {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.985);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .nav-scrolled {
+      background-color: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(12px);
+    }
+
+    .horn-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .horn-icon:hover {
+      transform: rotate(8deg);
+    }
+
+    .prose-custom p {
+      margin-bottom: 1.1em;
+      line-height: 1.7;
+    }
+
+    .prose-custom h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.35rem;
+      margin-top: 1.6em;
+      margin-bottom: 0.6em;
+    }
+  </style>
 </head>
-<body>
-<div class="textstyle1">
-<div id="container_41e58864"><div id="container_41e58864_padding" ><div class="textstyle2"><div id="menu_46d16b"><div  class="menuholder1"><a href="javascript:void(0);" tabindex="-1" aria-label="Menu &#9776;" >
-	<div id="menuentry_78bff89b"  class="menustyle1 menu_46d16b_mainMenuEntry mobileEntry">
-		<div class="menuentry_text1">
-  <span class="textstyle3">Menu &#9776;</span>
-		</div>
-	</div>
-</a>
-<a href="javascript:void(0);" tabindex="-1" aria-label="Home" >
-	<div id="menuentry_2c509ff5"  class="menustyle1 menu_46d16b_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Home</span>
-		</div>
-	</div>
-</a>
-<a href="about" style="text-decoration:none" tabindex="-1">
-	<div id="menuentry_3ae69361"  class="menustyle2 menu_46d16b_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">About</span>
-		</div>
-	</div>
-</a>
-<a href="contact.php" style="text-decoration:none" tabindex="-1">
-	<div id="menuentry_789b3a9"  class="menustyle3 menu_46d16b_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Contact</span>
-		</div>
-	</div>
-</a>
-<a href="lore" style="text-decoration:none" tabindex="-1">
-	<div id="menuentry_4c4ecec7"  class="menustyle4 menu_46d16b_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Fannish Lore</span>
-		</div>
-	</div>
-</a>
+<body class="tail-container bg-slate-950 text-slate-200">
+  <!-- Navbar -->
+  <nav id="nav" class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-3">
+          <div class="flex items-center justify-center w-9 h-9 rounded-full bg-amber-900/30 border border-amber-800/60">
+            <!-- Jackalope horn SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="horn-icon">
+              <path d="M4 19C4 19 7 15.5 7 12C7 9.5 9 8 12 8" stroke="#d97706" stroke-width="1.75" stroke-linecap="round"/>
+              <path d="M20 19C20 19 17 15.5 17 12C17 9.5 15 8 12 8" stroke="#d97706" stroke-width="1.75" stroke-linecap="round"/>
+              <path d="M12 8V3.5" stroke="#d97706" stroke-width="1.75" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="2.5" fill="#d97706"/>
+              <path d="M10 14.5C10 14.5 11 16 12 16C13 16 14 14.5 14 14.5" stroke="#854d0e" stroke-width="1.25" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-semibold tracking-tight text-xl serif">The Jackalope of Truth</span>
+          </div>
+        </div>
 
-	<script type="text/javascript" src="rc_images/wsp_menu.js"></script>
-	<script type="text/javascript">
-		var js_menu_46d16b= new wsp_menu('menu_46d16b', 'menu_46d16b', 10, null, true, {generateAriaLabels: true, setUsefulTabIndices: true, closeWhenMouseOut: false} );
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-x-8 text-sm">
+          <a href="#about" class="nav-link text-slate-300 hover:text-white">About</a>
+          <a href="#legend" class="nav-link text-slate-300 hover:text-white">The Legend</a>
+          <a href="#dispatches" class="nav-link text-slate-300 hover:text-white">Dispatches</a>
+          <a href="#contact" class="nav-link text-slate-300 hover:text-white">Contact</a>
+        </div>
 
-		js_menu_46d16b.createMenuForItem('menuentry_78bff89b', ["  <span class=\"textstyle5\">Home</span> ", 'javascript:void(0);', '',
-		                                   "  <span class=\"textstyle5\">&#160;&#160;&#160;The End of the Internet</span> ", 'end.html', '_blank',
-		                                   "  <span class=\"textstyle5\">About</span> ", 'about', '',
-		                                   "  <span class=\"textstyle5\">&#160;&#160;&#160;Who I Am and How I Came To Be</span> ", 'about/whoami.html', '',
-		                                   "  <span class=\"textstyle5\">&#160;&#160;&#160;How Gen-X Changed the World</span> ", 'about/gen-x.html', '',
-		                                   "  <span class=\"textstyle5\">Contact</span> ", 'contact.php', '',
-		                                   "  <span class=\"textstyle5\">Fannish Lore</span> ", 'lore', '',
-		                                   "  <span class=\"textstyle5\">&#160;&#160;&#160;The Ballad of James Dixon</span> ", 'lore/dixon', '']
-		                                   , true);
-		js_menu_46d16b.createMenuForItem('menuentry_2c509ff5', ["  <span class=\"textstyle4\">The End of the Internet</span> ", 'end.html', '_blank']);
-		js_menu_46d16b.createMenuForItem('menuentry_3ae69361', ["  <span class=\"textstyle4\">Who I Am and How I Came To Be</span> ", 'about/whoami.html', '',
-		                                   "  <span class=\"textstyle4\">How Gen-X Changed the World</span> ", 'about/gen-x.html', '']);
-		js_menu_46d16b.createMenuForItem('menuentry_789b3a9', []);
-		js_menu_46d16b.createMenuForItem('menuentry_4c4ecec7', ["  <span class=\"textstyle4\">The Ballad of James Dixon</span> ", 'lore/dixon', '']);
+        <div class="flex items-center gap-x-3">
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn"
+                  class="md:hidden flex items-center justify-center w-9 h-9 text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg transition-colors"
+                  aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+          
+          <a href="#dispatches" 
+             class="hidden md:inline-flex items-center px-4 py-1.5 text-xs font-semibold tracking-wider bg-amber-900/30 hover:bg-amber-900/50 border border-amber-800/60 hover:border-amber-700 transition-colors rounded-lg">
+            READ THE DISPATCHES
+          </a>
+        </div>
+      </div>
+    </div>
 
-	</script>
-</div></div><div id="container_304cc980"><div id="container_304cc980_padding" ><div class="textstyle2"><img src="rc_images/wrs3_jot_2271x1514_1400x933.png" width="1400" height="933" id="img_f13da55" alt="" title="" /><span class="textstyle6"><br/></span><h2 id="heading_154e3907">Welcome!</h2><span class="textstyle6"><br/></span><span class="textstyle7">You've stumbled across the development home page of:<br/></span><ul id="ul_bf93e17" class="ulstyle1">
-<li><span class="textstyle7">The </span><span class="textstyle7"><a href="lore/dakota_jackelope">Jackelope</a></span><span class="textstyle7"> of Truth</span></li>
-<ul id="ul_300642e8" class="ulstyle1">
-<li><span class="textstyle7">That's the Dakota Jackelope and not its more common sibling, the Wyoming Jackalope.  </span><span class="textstyle8">Big</span><span class="textstyle7"> difference.</span></li>
-<li><span class="textstyle7">Both are deadly apex predators, but the Dakota Jackelope is far more prone to atrocities.</span></li>
-</ul>
-<li><span class="textstyle7">Commodore Lord William Robert Stone III, </span><span class="textstyle7"><a href="https://sealandgov.org/" target="_blank">Principality of Sealand</a></span><span class="textstyle7">, RSN, Ret.</span></li>
-<li><span class="textstyle7">The</span><span class="textstyle7"><a href="https://en.wikipedia.org/wiki/Ted_McGinley" target="_blank">Ted McGinley</a></span><span class="textstyle7"> of Information Technology</span></li>
-<li><span class="textstyle7">The college instructor at </span><span class="textstyle7"><a href="https://en.wikipedia.org/wiki/ITT_Technical_Institute" target="_blank">The Place That Shall Not Be Named</a></span><span class="textstyle7"></span></li>
-<li><span class="textstyle7">The </span><span class="textstyle7"><a href="https://www.youtube.com/@SYLDarkroom" target="_blank">YouTube Creator</a></span><span class="textstyle7">.</span></li>
-<li><span class="textstyle7">The failed actor.</span></li>
-<li><span class="textstyle7">The occasional retired </span><span class="textstyle7"><a href="https://maps.app.goo.gl/kpD53x3ZLDjBojEC6" target="_blank">Gentleman Rancher</a></span><span class="textstyle7">.</span></li>
-<li><span class="textstyle7"> The lifelong </span><span class="textstyle8"><a href="https://en.wikipedia.org/wiki/Star_Trek" target="_blank">Star Trek</a></span><span class="textstyle7"> and science fiction fan </span></li>
-<ul id="ul_673ad8a3" class="ulstyle1">
-<li><span class="textstyle7">Clarification: I'm a lifelong fan of </span><span class="textstyle8">Star Trek</span><span class="textstyle7"> as the franchise existed from 1966-2005.</span></li>
-<li><span class="textstyle7">The current (about to be previous) steward, </span><span class="textstyle7"><a href="https://en.wikipedia.org/wiki/Alex_Kurtzman" target="_blank">He Who Shall Not Be Named</a></span><span class="textstyle7"> is a talentless hack-fraud and produces only juvenile idiocy.</span></li>
-<li><span class="textstyle7">He has devalued the franchise to worthlessness.  Skydance would do well to sell it on </span><span class="textstyle7"><a href="https://rapidcity.craigslist.org/search/zip#search=2~gallery~0" target="_blank">Craigslist</a></span><span class="textstyle7"> for ten bucks.</span></li>
-<li><span class="textstyle7">Not to mention he employs </span><span class="textstyle7"><a href="https://en.wikipedia.org/wiki/Akiva_Goldsman">Akiva Goldsman</a></span><span class="textstyle7">, a sick, disgusting, nauseating, degenerate pervert who wants to put incest into </span><span class="textstyle8">Star Trek</span><span class="textstyle7">.</span></li>
-<ul id="ul_5e4f7768" class="ulstyle1">
-<li><span class="textstyle7">If you get aroused by incest, you have a serious psychological problem.</span></li>
-<li><span class="textstyle7">Please go the the </span><span class="textstyle7"><a href="https://locator.apa.org" target="_blank">American Psychological Association's referral website</a></span><span class="textstyle7"> to find a qualified therapist in your area.</span></li>
-<li><span class="textstyle7">I'm absolutely serious.</span></li>
-<ul id="ul_6f28f537" class="ulstyle2">
-<li><span class="textstyle7"><a href="https://locator.apa.org">Get help</a></span><span class="textstyle7">.</span></li>
-<li><span class="textstyle7"><a href="https://locator.apa.org" target="_blank">https://locator.apa.org </a></span></li>
-</ul>
-</ul>
-</ul>
-</ul>
-</div>
-<div style="clear:both"></div></div></div><div id="container_6385801d"><div id="container_6385801d_padding" ><div class="textstyle2"><div id="container_40c8368a"><div id="container_40c8368a_padding" ><div class="textstyle2"></div>
-<div class="textstyle1">  <span class="textstyle9">VIRAL VIDEOS</span>
-</div>
-</div></div><div id="container_5a4d3624"><div id="container_5a4d3624_padding" ><div class="textstyle2"><iframe title="YouTube video player" frameborder="0" allowfullscreen="1"  src="https://www.youtube.com/embed/_NkLKGkJERg" id="youtube_5be0ad15"></iframe><span class="textstyle10">Gordon's alive!</span><span class="textstyle11">  Really </span><span class="textstyle10">alive!</span><span class="textstyle11"><br/><br/>Filmation's long-lost masterpiece is back -- now in stunning 4K at 60 frames per second.<br/><br/>This is not the campy 1980 movie.  This is the serious, cinematic 1979 version that never got its chance.  Real drama, superb action, beautiful animation, and a story that holds up with the best scifi.</span></div>
-<div style="clear:both"></div></div></div><div id="container_6d14fdfd"><div id="container_6d14fdfd_padding" ><div class="textstyle2"></div>
-<div class="textstyle1">  <span class="textstyle9">VIDEO RARITIES</span>
-</div>
-</div></div><div id="container_169edec1"><div id="container_169edec1_padding" ><div class="textstyle2"><iframe title="YouTube video player" frameborder="0" allowfullscreen="1"  src="https://www.youtube.com/embed/mI0bAb-5yU8" id="youtube_4d3010c9"></iframe><span class="textstyle11"><br/><br/>In this classic 1976 episode, Tom Snyder interviews DeForest Kelley (Dr. McCoy), James Doohan (Scotty), Walter Koenig (Chekov), and writer extraordinare Harlan Ellison.</span></div>
-<div style="clear:both"></div></div></div><iframe title="YouTube video player" frameborder="0" allowfullscreen="1"  src="https://www.youtube.com/embed/RgVrmphq5m0" id="youtube_43dea141"></iframe><div id="container_47c2b40a"><div id="container_47c2b40a_padding" ><div class="textstyle12">  <span class="textstyle11">A crusading newspaper editor tricks his retiring star reporter into covering one last case! <br/><br/>Written by two Chicago reporters, the behavior of the reporters is taken from their own eperience, and is accurate!<br/><br/>Update to modern tech, and there is no difference in &quot;journalism&quot; since before 1931!</span>
-</div>
-<div class="textstyle2"></div>
-</div></div></div>
-<div style="clear:both"></div></div></div><span class="textstyle13"><br/></span><div id="container_3a5fa1d1"><div id="container_3a5fa1d1_padding" ><div class="textstyle2"><div id="container_19b17259"><div id="container_19b17259_padding" ><div class="textstyle2"><span class="textstyle14">William Robert Stone III</span><span class="textstyle15"><br/><br/></span><ul id="ul_177c2b57" class="ulstyle2">
-<li><span class="textstyle15"><a href="https://www.wrstone.com">Website</a></span><span class="textstyle15"></span></li>
-<li><span class="textstyle15"><a href="contact.php">Contact Me</a></span></li>
-</ul>
-</div>
-</div></div><div id="container_446233ab"><div id="container_446233ab_padding" ><div class="textstyle2"><span class="textstyle14">SYL Ranch</span><span class="textstyle15"><br/><br/></span><ul id="ul_32a9e224" class="ulstyle2">
-<li><span class="textstyle15"><a href="https://www.youtube.com/sylranch-sd" target="_blank">YouTube</a></span><span class="textstyle15"></span></li>
-<li><span class="textstyle15"><a href="https://www.sylranch.tv" target="_blank">Website</a></span><span class="textstyle15"></span></li>
-<li><span class="textstyle15"><a href="https://www.x.com/syldarkroom" target="_blank">X</a></span><span class="textstyle15"></span></li>
-<li><span class="textstyle15"><a href="https://www.facebook.com/SYLDatkroom">Facebook</a></span></li>
-</ul>
-</div>
-</div></div><div id="container_b8c83aa"><div id="container_b8c83aa_padding" ><div class="textstyle2">  <span class="textstyle14">SYL Ranch </span>
-<span class="textstyle16">Darkroom</span><span class="textstyle15"><br/><br/></span><ul id="ul_5ad1743c" class="ulstyle2">
-<li><span class="textstyle15"><a href="https://www.YouTube.com/SYLDarkroom" target="_blank">YouTube</a></span></li>
-<li><span class="textstyle15"><a href="https://sylranch.tv" target="_blank">Websute</a></span></li>
-<li><span class="textstyle15"><a href="https://www.x.com/SYLDarkroom" target="_blank">X</a></span><span class="textstyle15"> </span></li>
-<li><span class="textstyle15"><a href="https://www.facebook.com/SYLDatkroom">Facebook</a></span></li>
-</ul>
-</div>
-</div></div></div>
-<div style="clear:both"></div></div></div></div>
-<div style="clear:both"></div></div></div>  </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950">
+      <div class="px-6 py-4 flex flex-col gap-y-3 text-sm">
+        <a href="#about" class="nav-link py-1 text-slate-300">About</a>
+        <a href="#legend" class="nav-link py-1 text-slate-300">The Legend</a>
+        <a href="#dispatches" class="nav-link py-1 text-slate-300">Dispatches</a>
+        <a href="#contact" class="nav-link py-1 text-slate-300">Contact</a>
+        <div class="pt-2">
+          <a href="#dispatches" class="inline-flex items-center px-4 py-2 text-xs font-semibold bg-amber-900/30 border border-amber-800/60 rounded-lg">
+            READ THE DISPATCHES
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative h-[100dvh] min-h-[620px] flex items-center justify-center overflow-hidden bg-slate-900">
+    <img src="images/hero.jpg" alt="The Jackalope of Truth" 
+         class="absolute inset-0 w-full h-full object-cover hero-image">
+    
+    <!-- Gradient overlays -->
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/60 to-slate-950/80"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-transparent to-slate-950/30"></div>
+    
+    <div class="relative z-10 max-w-4xl px-6 text-center">
+      <div class="inline-block px-4 py-1 mb-4 text-xs tracking-[2px] bg-amber-900/30 border border-amber-800/60 text-amber-400 rounded-full font-mono font-medium">
+        RETIRED • UNREPENTANT
+      </div>
+      
+      <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter serif text-white leading-none">
+        THE JACKALOPE<br>OF TRUTH
+      </h1>
+      
+      <p class="mt-6 max-w-lg mx-auto text-xl text-slate-300">
+        Retired computer scientist.<br>
+        Former junior college instructor.<br>
+        <span class="text-amber-400">Professional deliverer of uncomfortable facts.</span>
+      </p>
+
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#about" 
+           class="px-7 py-3.5 rounded-xl bg-white text-slate-950 font-semibold text-sm tracking-wide hover:bg-amber-100 transition-all active:scale-[0.985]">
+          ABOUT THE JACKALOPE
+        </a>
+        <a href="#dispatches" 
+           class="px-7 py-3.5 rounded-xl border border-slate-300/60 hover:bg-white/5 text-sm font-semibold tracking-wide transition-all">
+          READ THE DISPATCHES
+        </a>
+      </div>
+      
+      <div class="mt-16 text-[10px] tracking-[1.5px] text-slate-500 font-mono">
+        SCROLL TO BEGIN
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto px-6 pt-16 pb-20">
+    <div class="grid md:grid-cols-12 gap-x-12 gap-y-12 items-center">
+      <!-- Text -->
+      <div class="md:col-span-7">
+        <div class="section-header text-amber-500 mb-3">The Man Behind the Horns</div>
+        <h2 class="text-5xl tracking-tighter font-semibold serif leading-none">A career spent<br>between code and candor.</h2>
+        
+        <div class="mt-8 max-w-prose text-[15px] leading-relaxed text-slate-300 space-y-5">
+          <p>After several decades working in computer science — systems, languages, and the occasional piece of infrastructure that outlived its original authors — I retired from the daily grind.</p>
+          
+          <p>For a few memorable years I taught at a junior college. That is where the students, in their infinite wisdom, bestowed upon me the title <span class="font-medium text-amber-400">The Jackalope of Truth</span>.</p>
+          
+          <p>I no longer grade papers or review pull requests at 2 a.m. These days I write when the mood strikes, think too much about the state of the field, and remain deeply skeptical of anyone who claims to have solved anything permanently.</p>
+        </div>
+
+        <div class="mt-8 flex items-center gap-x-3 text-sm">
+          <div class="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full text-xs">Still thinks in algorithms</div>
+          <div class="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full text-xs">Occasionally correct</div>
+        </div>
+      </div>
+
+      <!-- Avatar -->
+      <div class="md:col-span-5">
+        <div class="relative">
+          <img src="images/avatar.jpg" alt="The Jackalope of Truth" 
+               class="w-full max-w-[420px] rounded-2xl border border-slate-800 shadow-2xl mx-auto md:mx-0">
+          <div class="absolute -bottom-2 -right-2 bg-slate-950 border border-slate-700 text-xs px-3 py-1 rounded-lg font-mono tracking-wider">
+            CIRCA 2025
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Legend -->
+  <section id="legend" class="border-t border-slate-800 bg-slate-900/60">
+    <div class="max-w-4xl mx-auto px-6 py-16">
+      <div class="section-header text-amber-500 mb-2">ORIGIN STORY</div>
+      <h2 class="text-4xl tracking-tighter font-semibold serif">The Legend of the Jackalope</h2>
+      
+      <div class="prose-custom mt-7 max-w-3xl text-[15px] text-slate-300 leading-relaxed">
+        <p>The name was never self-appointed. During one particularly honest semester, while teaching a data structures course that many students found both enlightening and personally insulting, a small group began referring to me as “the jackalope.”</p>
+        
+        <p>Half rabbit — unassuming at first glance. Half antelope — with horns that appeared when you least expected them. And when those horns came out, the truth followed, often with little regard for feelings or the sanctity of the group project.</p>
+        
+        <p>Students said things like:</p>
+        <blockquote class="pl-5 border-l-2 border-amber-800/70 italic my-6 text-slate-400">
+          “He looks harmless until the moment he explains exactly why your code is bad and why you will continue to write bad code until you stop lying to yourself.”
+        </blockquote>
+        
+        <p>The “of Truth” part was added later, mostly ironically, then adopted with a strange sort of pride. I wear it now as a retired man wears an old, slightly ridiculous but accurate coat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dispatches -->
+  <section id="dispatches" class="max-w-6xl mx-auto px-6 pt-16 pb-20">
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <div class="section-header text-amber-500">DISPATCHES</div>
+        <h2 class="text-4xl tracking-tighter font-semibold serif">Notes from the warren</h2>
+      </div>
+      <div class="hidden md:block text-xs uppercase tracking-widest text-slate-500">Selected writings • 2023–2026</div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- Dispatch 1 -->
+      <div onclick="showDispatch(0)" class="dispatch-card group cursor-pointer border border-slate-800 bg-slate-900 rounded-2xl p-6 flex flex-col">
+        <div class="flex-1">
+          <div class="text-xs text-amber-400/90 font-mono tracking-wider mb-3">FEBRUARY 2025</div>
+          <h3 class="font-semibold text-xl leading-tight tracking-tight group-hover:text-amber-400 transition-colors">The Slow Death of Teaching How to Think</h3>
+          <p class="mt-4 text-sm text-slate-400">Most curricula now teach frameworks instead of fundamentals. The result is a generation of developers who can follow tutorials but cannot debug reality.</p>
+        </div>
+        <div class="mt-6 text-xs flex items-center gap-x-2 text-amber-500 font-medium">
+          READ DISPATCH <i class="fa-solid fa-arrow-right ml-1 transition group-hover:translate-x-0.5"></i>
+        </div>
+      </div>
+
+      <!-- Dispatch 2 -->
+      <div onclick="showDispatch(1)" class="dispatch-card group cursor-pointer border border-slate-800 bg-slate-900 rounded-2xl p-6 flex flex-col">
+        <div class="flex-1">
+          <div class="text-xs text-amber-400/90 font-mono tracking-wider mb-3">OCTOBER 2024</div>
+          <h3 class="font-semibold text-xl leading-tight tracking-tight group-hover:text-amber-400 transition-colors">Why Your Framework Will Not Save You</h3>
+          <p class="mt-4 text-sm text-slate-400">Every few years we decide that this time, this abstraction will finally protect us from our own bad decisions. It never does.</p>
+        </div>
+        <div class="mt-6 text-xs flex items-center gap-x-2 text-amber-500 font-medium">
+          READ DISPATCH <i class="fa-solid fa-arrow-right ml-1 transition group-hover:translate-x-0.5"></i>
+        </div>
+      </div>
+
+      <!-- Dispatch 3 -->
+      <div onclick="showDispatch(2)" class="dispatch-card group cursor-pointer border border-slate-800 bg-slate-900 rounded-2xl p-6 flex flex-col">
+        <div class="flex-1">
+          <div class="text-xs text-amber-400/90 font-mono tracking-wider mb-3">JUNE 2024</div>
+          <h3 class="font-semibold text-xl leading-tight tracking-tight group-hover:text-amber-400 transition-colors">On Being Correct in a Room Full of Smart People</h3>
+          <p class="mt-4 text-sm text-slate-400">There is a special kind of professional loneliness that comes from pointing out the obvious flaw everyone has decided to ignore for the sake of velocity.</p>
+        </div>
+        <div class="mt-6 text-xs flex items-center gap-x-2 text-amber-500 font-medium">
+          READ DISPATCH <i class="fa-solid fa-arrow-right ml-1 transition group-hover:translate-x-0.5"></i>
+        </div>
+      </div>
+
+      <!-- Dispatch 4 -->
+      <div onclick="showDispatch(3)" class="dispatch-card group cursor-pointer border border-slate-800 bg-slate-900 rounded-2xl p-6 flex flex-col">
+        <div class="flex-1">
+          <div class="text-xs text-amber-400/90 font-mono tracking-wider mb-3">DECEMBER 2023</div>
+          <h3 class="font-semibold text-xl leading-tight tracking-tight group-hover:text-amber-400 transition-colors">Retirement Is Just Another Infinite Loop</h3>
+          <p class="mt-4 text-sm text-slate-400">The difference is you finally get to choose what condition breaks the cycle. Most people never figure out the exit condition.</p>
+        </div>
+        <div class="mt-6 text-xs flex items-center gap-x-2 text-amber-500 font-medium">
+          READ DISPATCH <i class="fa-solid fa-arrow-right ml-1 transition group-hover:translate-x-0.5"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Notes -->
+  <section class="border-t border-slate-800 bg-slate-900/50 py-14">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-header text-amber-500 mb-4">BRIEF NOTES</div>
+      <h3 class="font-semibold tracking-tight text-3xl serif">A few things that actually happened</h3>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
+        <div class="border-l-2 border-amber-800/70 pl-5">
+          <div class="font-mono text-xs text-amber-400/70">1980s – 2010s</div>
+          <div class="font-medium mt-2">Industry systems work</div>
+          <div class="text-slate-400 text-[13px] mt-1">Operating systems, language runtimes, large-scale infrastructure. The kind of work that mostly succeeds when nobody notices it is there.</div>
+        </div>
+        <div class="border-l-2 border-amber-800/70 pl-5">
+          <div class="font-mono text-xs text-amber-400/70">2016 – 2019</div>
+          <div class="font-medium mt-2">Junior college instructor</div>
+          <div class="text-slate-400 text-[13px] mt-1">Taught introductory computer science, data structures, and software engineering. Discovered that many students preferred harsh honesty to gentle confusion.</div>
+        </div>
+        <div class="border-l-2 border-amber-800/70 pl-5">
+          <div class="font-mono text-xs text-amber-400/70">2020 – present</div>
+          <div class="font-medium mt-2">Retired observer</div>
+          <div class="text-slate-400 text-[13px] mt-1">Writing, thinking, and occasionally telling people that the new thing they are excited about is the old thing with different marketing.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-20">
+    <div class="text-center">
+      <div class="section-header text-amber-500 mb-2">GET IN TOUCH</div>
+      <h2 class="serif text-4xl tracking-tighter font-semibold">Have a truth to share?</h2>
+      <p class="mt-4 text-slate-400 max-w-md mx-auto">I read most messages. I respond to the interesting ones.</p>
+    </div>
+
+    <div class="mt-10 max-w-md mx-auto">
+      <form onsubmit="handleContact(event)" class="space-y-5">
+        <div>
+          <label class="block text-xs tracking-wider text-slate-400 mb-1.5 ml-0.5">YOUR NAME</label>
+          <input type="text" id="name" required 
+                 class="w-full bg-slate-900 border border-slate-800 focus:border-amber-800/60 rounded-xl px-4 py-3 text-sm outline-none transition-colors">
+        </div>
+        <div>
+          <label class="block text-xs tracking-wider text-slate-400 mb-1.5 ml-0.5">EMAIL ADDRESS</label>
+          <input type="email" id="email" required 
+                 class="w-full bg-slate-900 border border-slate-800 focus:border-amber-800/60 rounded-xl px-4 py-3 text-sm outline-none transition-colors">
+        </div>
+        <div>
+          <label class="block text-xs tracking-wider text-slate-400 mb-1.5 ml-0.5">MESSAGE</label>
+          <textarea id="message" rows="4" required 
+                    class="w-full resize-y min-h-[108px] bg-slate-900 border border-slate-800 focus:border-amber-800/60 rounded-2xl px-4 py-3 text-sm outline-none transition-colors"></textarea>
+        </div>
+
+        <button type="submit"
+                class="w-full mt-2 rounded-2xl py-3.5 bg-amber-700 hover:bg-amber-600 active:bg-amber-800 transition-colors font-semibold text-sm tracking-wider">
+          SEND MESSAGE
+        </button>
+      </form>
+
+      <div class="mt-10 text-center">
+        <div class="flex justify-center gap-x-6 text-xl text-slate-400">
+          <a href="#" class="hover:text-amber-400 transition-colors" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-amber-400 transition-colors" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="#" class="hover:text-amber-400 transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="mt-5 text-[10px] text-slate-600 font-mono tracking-[1px]">ALL OPINIONS ARE MINE. MOST OF THEM ARE CORRECT.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 py-7 text-xs text-center text-slate-500 tracking-wide font-mono">
+    © THE JACKALOPE OF TRUTH — ALL RIGHTS RESERVED. TRUTHS MAY BE REPRODUCED WITH ATTRIBUTION.
+  </footer>
+
+  <!-- Dispatch Modal -->
+  <div id="modal" onclick="if (event.target.id === 'modal') hideModal()" class="hidden fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4">
+    <div onclick="event.stopImmediatePropagation()" 
+         class="modal max-w-2xl w-full bg-slate-900 border border-slate-700 rounded-3xl max-h-[88vh] overflow-hidden flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="px-8 pt-7 pb-5 border-b border-slate-800 flex items-start justify-between">
+        <div>
+          <div id="modal-date" class="font-mono text-xs tracking-[1.5px] text-amber-400/80"></div>
+          <h3 id="modal-title" class="serif text-3xl font-semibold tracking-tighter text-white mt-1 pr-6"></h3>
+        </div>
+        <button onclick="hideModal()" class="text-3xl leading-none text-slate-400 hover:text-white mt-1">×</button>
+      </div>
+      
+      <!-- Modal Body -->
+      <div class="p-8 overflow-y-auto flex-1 prose-custom text-[15px] text-slate-300 leading-relaxed" id="modal-body">
+      </div>
+      
+      <div class="px-8 py-4 border-t border-slate-800 text-right">
+        <button onclick="hideModal()" 
+                class="px-5 py-2 text-sm font-medium rounded-full bg-slate-800 hover:bg-slate-700 transition-colors">
+          CLOSE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tailwind configuration
+    function initializeTailwind() {
+      document.documentElement.style.setProperty('--accent', '#b45309');
+      
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'serif-custom': ['Instrument Serif', 'Georgia', 'serif']
+            }
+          }
+        }
+      };
+    }
+
+    // Navbar scroll effect
+    function setupNavbar() {
+      const nav = document.getElementById('nav');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+      });
+
+      // Mobile menu
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', !isHidden);
+        
+        const icon = menuBtn.querySelector('i');
+        if (isHidden) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+
+      // Close mobile menu on link click
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          const icon = menuBtn.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        });
+      });
+    }
+
+    // Dispatch content
+    const dispatches = [
+      {
+        date: "FEBRUARY 2025",
+        title: "The Slow Death of Teaching How to Think",
+        body: `
+          <p>We used to teach people how computers actually work. Memory models. The cost of abstraction. How to read a stack trace without crying.</p>
+          <p>Today many students arrive in their first job knowing how to import the correct library for any problem that has already been solved by someone else. They have never had to reason from first principles about why their program is slow, or why it is wrong in ways the linter cannot detect.</p>
+          <p>The universities are not solely to blame. Industry has been happy to reward people who can ship fast using the current fashionable tools. The result is a growing cohort of programmers who are extremely productive until the moment something goes wrong that the framework did not anticipate.</p>
+          <p>I do not blame the young. I blame the adults who decided that teaching people how to think was less important than teaching them how to use the hot new thing.</p>
+        `
+      },
+      {
+        date: "OCTOBER 2024",
+        title: "Why Your Framework Will Not Save You",
+        body: `
+          <p>Every generation of developers discovers the same truth: no framework can protect you from bad judgment.</p>
+          <p>The current cycle is especially amusing. We have decided that the problem with software is that there is too much of it written by hand. So now we generate even more of it using large language models and call it progress.</p>
+          <p>Frameworks and tools come and go. The fundamentals remain: you must still understand what your code actually does when it runs. You must still make tradeoffs. You must still decide what "good" means in your particular context.</p>
+          <p>The jackalope does not hate frameworks. The jackalope simply refuses to pretend they are a substitute for thinking.</p>
+        `
+      },
+      {
+        date: "JUNE 2024",
+        title: "On Being Correct in a Room Full of Smart People",
+        body: `
+          <p>There is a particular flavor of professional discomfort that arrives when you are the only person in the meeting willing to say the quiet part out loud.</p>
+          <p>Everyone in the room is intelligent. Many are well-intentioned. Yet for reasons of politics, optimism, or simple exhaustion, they have collectively decided to proceed with a plan that contains an obvious and fatal flaw.</p>
+          <p>Saying something in that moment rarely makes you popular. It often makes you the person who "slows things down." Over a long career you learn to choose your moments. You also learn that the cost of silence is sometimes higher than the cost of being temporarily disliked.</p>
+          <p>The jackalope has never been interested in being the most popular animal in the room.</p>
+        `
+      },
+      {
+        date: "DECEMBER 2023",
+        title: "Retirement Is Just Another Infinite Loop",
+        body: `
+          <p>People ask what I do with my time now that I am retired. The honest answer is that I have traded one set of constraints for another.</p>
+          <p>During my working life the loop was: wake up, solve problems other people created, go home, repeat. Now the loop is: wake up, decide which problems are worth my remaining attention, think about them until I am satisfied or disgusted, repeat.</p>
+          <p>The great freedom of retirement is not the absence of work. It is the absence of someone else deciding what the work should be. That freedom is also occasionally terrifying.</p>
+          <p>I recommend it highly, once you have figured out your exit condition.</p>
+        `
+      }
+    ];
+
+    function showDispatch(index) {
+      const dispatch = dispatches[index];
+      const modal = document.getElementById('modal');
+      const titleEl = document.getElementById('modal-title');
+      const dateEl = document.getElementById('modal-date');
+      const bodyEl = document.getElementById('modal-body');
+
+      titleEl.textContent = dispatch.title;
+      dateEl.textContent = dispatch.date;
+      bodyEl.innerHTML = dispatch.body;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Contact form handler
+    function handleContact(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // For a static site we just simulate sending + give honest response
+      const btn = e.target.querySelector('button');
+      const originalText = btn.textContent;
+      
+      btn.disabled = true;
+      btn.textContent = 'SENDING...';
+
+      setTimeout(() => {
+        btn.textContent = 'MESSAGE RECEIVED';
+        btn.classList.remove('bg-amber-700', 'hover:bg-amber-600');
+        btn.classList.add('bg-emerald-700');
+
+        // In a real deployment this would POST somewhere. For now:
+        setTimeout(() => {
+          alert("Thank you, " + name.split(" ")[0] + ". I will read what you wrote. If it is interesting I may reply. — The Jackalope");
+          
+          // Reset form
+          e.target.reset();
+          btn.disabled = false;
+          btn.textContent = originalText;
+          btn.classList.remove('bg-emerald-700');
+          btn.classList.add('bg-amber-700', 'hover:bg-amber-600');
+        }, 900);
+      }, 1100);
+    }
+
+    // Keyboard support for modal
+    function setupKeyboard() {
+      document.addEventListener('keydown', function(e) {
+        const modal = document.getElementById('modal');
+        if (!modal.classList.contains('hidden') && e.key === 'Escape') {
+          hideModal();
+        }
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            const navHeight = 64;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - navHeight;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+
+    // Boot everything
+    function init() {
+      initializeTailwind();
+      setupNavbar();
+      setupKeyboard();
+
+      // Optional: close mobile menu when clicking outside (nice touch)
+      document.addEventListener('click', function(e) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const btn = document.getElementById('mobile-menu-btn');
+        if (!mobileMenu.contains(e.target) && !btn.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+          const icon = btn.querySelector('i');
+          if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        }
+      });
+
+      // Easter egg: clicking the logo horn multiple times does nothing useful but feels right
+      let hornClicks = 0;
+      const logo = document.querySelector('.horn-icon');
+      if (logo) {
+        logo.addEventListener('click', () => {
+          hornClicks++;
+          if (hornClicks === 5) {
+            logo.style.transform = 'rotate(180deg)';
+            setTimeout(() => {
+              logo.style.transition = 'transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+              logo.style.transform = 'rotate(0deg)';
+              hornClicks = 0;
+            }, 650);
+          }
+        });
+      }
+
+      // Helpful console note for developers
+      console.log('%c[The Jackalope of Truth] Static site ready. All truths served locally.', 'color:#854d0e; font-size:9px');
+    }
+
+    // Initialize on load
+    init();
+  </script>
 </body>
 </html>

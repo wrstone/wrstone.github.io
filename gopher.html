@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>William Stone III: The Jackelope of Truth</title>
+    <style type="text/css">
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            display: block;
+            border: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="gopher" title="Gopher"></iframe>
+    <script>
+        const PROXY_ORIGIN = "https://github.com/wrstone/gopher-proxy";
+        const START_GOPHER = "gopher://sdf.org/users/wrstone/";
+
+        document.getElementById("gopher").src =
+            PROXY_ORIGIN + "/embed?url=" + encodeURIComponent(START_GOPHER);
+    </script>
+</body>
+</html>

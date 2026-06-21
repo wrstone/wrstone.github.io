@@ -1,31 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>William Stone III: The Jackelope of Truth</title>
-    <style type="text/css">
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        iframe {
-            display: block;
-            border: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-</head>
-<body>
-    <iframe id="gopher" title="Gopher"></iframe>
-    <script>
-        const PROXY_ORIGIN = "https://gopher.wrstone.com";
-        const START_GOPHER = "gopher://sdf.org/users/wrstone/";
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gopher Hole • The Jackalope of Truth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap');
 
-        document.getElementById("gopher").src =
-            PROXY_ORIGIN + "/embed?url=" + encodeURIComponent(START_GOPHER);
-    </script>
+    .tail-container { font-family: 'Inter', system-ui, sans-serif; }
+    .serif { font-family: 'Instrument Serif', Georgia, serif; }
+    .nav-link { transition: color 0.1s ease; }
+    .nav-link:hover { color: #d97706; }
+    .nav-link.active { color: #fbbf24; }
+
+    #gopher-shell {
+      height: calc(100dvh - 4rem);
+      min-height: 28rem;
+    }
+
+    #gopher-frame {
+      background: #0f1410;
+    }
+  </style>
+</head>
+<body class="tail-container bg-slate-950 text-slate-200 min-h-screen flex flex-col">
+  <nav class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950 shrink-0">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-x-3 group">
+          <div class="flex items-center justify-center w-9 h-9 rounded-full bg-amber-900/30 border border-amber-800/60 group-hover:border-amber-600 transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 19C4 19 7 15.5 7 12C7 9.5 9 8 12 8" stroke="#d97706" stroke-width="1.75" stroke-linecap="round"/>
+              <path d="M20 19C20 19 17 15.5 17 12C17 9.5 15 8 12 8" stroke="#d97706" stroke-width="1.75" stroke-linecap="round"/>
+              <path d="M12 8V3.5" stroke="#d97706" stroke-width="1.75" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="2.5" fill="#d97706"/>
+            </svg>
+          </div>
+          <span class="font-semibold tracking-tight text-xl serif">The Jackalope of Truth</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-x-8 text-sm">
+          <a href="index.html#about" class="nav-link text-slate-300">About</a>
+          <a href="index.html#legend" class="nav-link text-slate-300">The Legend</a>
+          <a href="index.html#dispatches" class="nav-link text-slate-300">Dispatches</a>
+          <a href="gopher.html" class="nav-link active font-medium">Gopher</a>
+          <a href="index.html#contact" class="nav-link text-slate-300">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-x-2">
+          <a id="gopher-open-tab" href="#" target="_blank" rel="noopener"
+             class="hidden sm:inline-flex items-center gap-x-1.5 px-3 py-1.5 text-xs font-semibold tracking-wider text-amber-400 border border-amber-800/60 rounded-lg hover:bg-amber-900/20 transition-colors">
+            <i class="fa-solid fa-up-right-from-square"></i> OPEN PROXY
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-9 h-9 text-slate-400 hover:text-white rounded-lg" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800">
+      <div class="px-6 py-4 flex flex-col gap-y-3 text-sm">
+        <a href="index.html#about" class="nav-link py-1 text-slate-300">About</a>
+        <a href="index.html#legend" class="nav-link py-1 text-slate-300">The Legend</a>
+        <a href="index.html#dispatches" class="nav-link py-1 text-slate-300">Dispatches</a>
+        <a href="gopher.html" class="nav-link active py-1">Gopher</a>
+        <a href="index.html#contact" class="nav-link py-1 text-slate-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="border-b border-slate-800 bg-slate-900/50 px-6 py-3 shrink-0">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 text-sm">
+      <div>
+        <div class="section-header text-amber-500 text-xs tracking-widest uppercase font-semibold">Gopher Hole</div>
+        <p class="text-slate-400 mt-0.5">Plain text, honest links — browse via the <a class="text-amber-400 hover:underline" href="https://github.com/wrstone/gopher-proxy">wrstone/gopher-proxy</a> service.</p>
+      </div>
+      <div id="gopher-status" class="text-xs text-slate-500 font-mono hidden">Loading Gopher proxy…</div>
+    </div>
+  </div>
+
+  <main id="gopher-shell" class="flex-1 w-full">
+    <iframe id="gopher-frame" title="Gopher browser" class="w-full h-full border-0" allow="fullscreen"></iframe>
+  </main>
+
+  <script src="assets/gopher-config.js"></script>
+  <script src="assets/gopher.js"></script>
+  <script>
+    document.getElementById("gopher-status").classList.remove("hidden");
+    const menuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+  </script>
 </body>
 </html>
